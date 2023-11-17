@@ -1,0 +1,138 @@
+.sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .session-nav {
+
+            display: flex;
+            gap: 14px;
+
+            .search-btn {
+                cursor: pointer;
+            }
+
+            .create-btn {
+                width: 112px;
+                height: 44px;
+                border-radius: 12px;
+                color: white;
+                background-color: #3761F3;
+                border: none;
+
+            }
+
+            .search-panel {
+                display: flex;
+                border: 1px solid #F4F4F4;
+                padding: 8px;
+                gap: 8px;
+                border-radius: 20px;
+                width:  260px;
+
+                input {
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .session-container {
+        border-radius: 12px 12px 0px 0px;
+        background: #F5F7F9;
+
+        .table-container {
+            height: 83vh;
+            overflow-y: auto;
+        }
+
+        table {
+            border-spacing: 0;
+
+            tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+
+            td {
+                // width: 33.3333%;
+                height: 68px;
+            }
+
+            td,
+            th {
+                padding: 10px;
+                text-align: start;
+            }
+
+
+            tbody {
+                .status {
+                    // width: Hug (123px);
+                    border-radius: 43px;
+                    gap: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    padding: 5px;
+
+                }
+
+                .Запланировано {
+                    background-color: #AFBFF5;
+                }
+
+                .Завершено {
+                    background-color: #91C893;
+                }
+
+                .Идет {
+                    background-color: #FFDAA1;
+                }
+
+                .Отменено {
+                    background-color: #f58484;
+                }
+            }
+
+            .sorting{
+                display: flex;
+                cursor: pointer;
+            }
+        }
+
+        .pagintation {
+
+            width: 100%;
+            height: 52px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .pageBtn {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
